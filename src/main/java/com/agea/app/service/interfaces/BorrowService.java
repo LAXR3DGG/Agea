@@ -10,8 +10,8 @@ import java.util.List;
  */
 public interface BorrowService {
     BorrowRecord createRecord(BorrowRequestDTO borrowRequestDTO);
-    BorrowRecord getRecord(String borrowRecordId);
+    BorrowRecord getRecord(Long borrowRecordId);
     List<BorrowRecord> getAll();
-    BorrowRecord confirmBorrow(String borrowRecordId);
-    BorrowRecord confirmReturn(String borrowRecordId);
+    BorrowRecord confirmBorrow(Long borrowRecordId);
+    BorrowRecord confirmReturn(Long borrowRecordId);
 }

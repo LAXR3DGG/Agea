@@ -19,12 +19,7 @@ public class DeviceController {
 
     @PostMapping("/devices")
     public Device createDevice(@Valid @RequestBody DeviceRegisterDTO deviceRegisterDTO) {
-        return new Device(
-                deviceRegisterDTO.getName(),
-                deviceRegisterDTO.getType(),
-                deviceRegisterDTO.getDescription()
-        );
-        //return deviceService.createDevice(deviceRegisterDTO);
+        return deviceService.createDevice(deviceRegisterDTO);
     }
 
     @GetMapping("/devices/{deviceId}")

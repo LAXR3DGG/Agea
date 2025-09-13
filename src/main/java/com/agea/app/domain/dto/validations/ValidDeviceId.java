@@ -1,4 +1,4 @@
-package com.agea.app.domain.dtos.validations;
+package com.agea.app.domain.dto.validations;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
@@ -16,11 +16,12 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Target({FIELD, METHOD, PARAMETER, ANNOTATION_TYPE})
 @Retention(RUNTIME)
 
-@NotNull(message = "Classroom must be provided")
-@NotBlank(message = "Classroom cannot be blank")
-@Pattern(regexp = "^\\d-\\d{2}", message = "Classroom must be like '2-32'")
-public @interface ValidClassroom {
-    String message() default "Invalid classroom";
+@NotNull(message = "Device ID must be provided")
+@Min(value = 0, message = "Device ID cannot be negative")
+public @interface ValidDeviceId {
+    String message() default "Invalid device ID";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 }
+
+

@@ -2,6 +2,7 @@ package com.agea.app.service.interfaces;
 
 import com.agea.app.domain.User;
 import com.agea.app.domain.dto.UserRegisterDTO;
+import com.agea.app.domain.dto.UserUpdateDTO;
 
 /**
  * Interface to declare the contract of any UserService implementation
@@ -9,6 +10,6 @@ import com.agea.app.domain.dto.UserRegisterDTO;
 public interface UserService {
     User createUser(UserRegisterDTO userRegisterDTO);
     User getUser(String userId);
-    User updateUser(String userId, UserRegisterDTO userRegisterDTO);
+    User updateUser(String userId, UserUpdateDTO userUpdateDTO);
     void deleteUser(String userId);
 }

@@ -3,21 +3,16 @@ package com.agea.app.domain.dto;
 import com.agea.app.domain.dto.validations.ValidUserId;
 import com.agea.app.domain.dto.validations.ValidUserName;
 import com.agea.app.domain.dto.validations.ValidUserPassword;
-import com.agea.app.domain.enums.UserRole;
-import jakarta.validation.constraints.NotNull;
 
-public class UserRegisterDTO {
+public class UserUpdateDTO {
     @ValidUserName
     private String name;
     @ValidUserId
     private String id;
     @ValidUserPassword
     private String password; // Password is still plaintext here
-    @NotNull(message = "User role must be provided")
-    private UserRole role;
 
-    // <editor-fold defaultstate="collapsed" desc="Getters & Setters">
-
+    // <editor-fold defaultstate="collapsed" desc="Getters & setters">
     public String getName() {
         return name;
     }
@@ -41,6 +36,5 @@ public class UserRegisterDTO {
     public void setPassword(String password) {
         this.password = password;
     }
-
     // </editor-fold>
 }

@@ -2,6 +2,7 @@ package com.agea.app.service;
 
 import com.agea.app.domain.User;
 import com.agea.app.domain.dto.UserRegisterDTO;
+import com.agea.app.domain.dto.UserUpdateDTO;
 import com.agea.app.service.interfaces.UserService;
 import org.springframework.stereotype.Service;
 
@@ -26,7 +27,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User updateUser(String userId, UserRegisterDTO userRegisterDTO) {
+    public User updateUser(String userId, UserUpdateDTO userUpdateDTO) {
         return null;
     }
 

@@ -4,6 +4,7 @@ import com.agea.app.domain.User;
 import com.agea.app.domain.dto.LoginRequestDTO;
 import com.agea.app.domain.dto.LoginResponseDTO;
 import com.agea.app.domain.dto.UserRegisterDTO;
+import com.agea.app.domain.dto.UserUpdateDTO;
 import com.agea.app.service.interfaces.AuthService;
 import com.agea.app.service.interfaces.UserService;
 import jakarta.validation.Valid;
@@ -28,9 +29,9 @@ public class UserController {
     @PatchMapping("/users/{userId}")
     public User updateUser(
             @PathVariable String userId,
-            @Valid @RequestBody UserRegisterDTO userRegisterDTO
+            @Valid @RequestBody UserUpdateDTO userUpdateDTO
     ) {
-        return userService.updateUser(userId, userRegisterDTO);
+        return userService.updateUser(userId, userUpdateDTO);
     }
 
     @DeleteMapping("/users/{userId}")
